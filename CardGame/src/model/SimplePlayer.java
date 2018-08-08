@@ -4,7 +4,7 @@ import model.interfaces.Player;
 
 public class SimplePlayer implements Player 
 {
-	public SimplePlayer(String score, String name, int bet)
+	public SimplePlayer(String playerID, String playerName, int initialPoints)
 	{
 		
 	}

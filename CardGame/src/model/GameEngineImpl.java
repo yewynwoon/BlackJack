@@ -25,8 +25,10 @@ public class GameEngineImpl implements GameEngine
 	}
 
 	@Override
-	public void addPlayer(Player player) {
+	public void addPlayer(Player player) 
+	{
 		// TODO Auto-generated method stub
+		
 
 	}
 
