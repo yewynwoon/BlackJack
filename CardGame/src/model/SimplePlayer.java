@@ -4,9 +4,15 @@ import model.interfaces.Player;
 
 public class SimplePlayer implements Player 
 {
+	String playerID = "";
+	String playerName = "";
+	int initialPoints = 0;
+	
 	public SimplePlayer(String playerID, String playerName, int initialPoints)
 	{
-		
+		this.playerID = playerID;
+		this.playerName = playerName;
+		this.initialPoints = initialPoints;
 	}
 	@Override
 	public String getPlayerName() {
