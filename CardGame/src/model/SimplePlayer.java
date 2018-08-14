@@ -7,6 +7,8 @@ public class SimplePlayer implements Player
 	String playerID = "";
 	String playerName = "";
 	int initialPoints = 0;
+	int updatedPoints = 0;
+	int bet = 0;
 	
 	public SimplePlayer(String playerID, String playerName, int initialPoints)
 	{
@@ -15,52 +17,61 @@ public class SimplePlayer implements Player
 		this.initialPoints = initialPoints;
 	}
 	@Override
-	public String getPlayerName() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getPlayerName() 
+	{
+		return playerName;
 	}
 
 	@Override
 	public void setPlayerName(String playerName) 
 	{
-		// TODO Auto-generated method stub
-
+		this.playerName = playerName;
 	}
 
 	@Override
-	public int getPoints() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getPoints() 
+	{
+		return initialPoints;
 	}
 
 	@Override
-	public void setPoints(int points) {
-		// TODO Auto-generated method stub
-
+	public void setPoints(int points) 
+	{
+		updatedPoints = points;
 	}
 
 	@Override
-	public String getPlayerId() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getPlayerId() 
+	{
+		return playerID;
 	}
 
 	@Override
-	public boolean placeBet(int bet) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean placeBet(int bet) 
+	{
+		boolean verify;
+		if (bet >= 0)
+		{
+		verify = true;
+		this.bet = bet;
+		}
+		else
+		{
+		verify = false;
+		}
+		return verify;
 	}
 
 	@Override
-	public int getBet() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getBet() 
+	{
+		return bet;
 	}
 
 	@Override
-	public void resetBet() {
-		// TODO Auto-generated method stub
-
+	public void resetBet() 
+	{
+		this.bet = 0;
 	}
 
 	@Override
